@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Index Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include('partials/header.ejs')%>
+    <main>
+      <div class="container">
+        <h1 class="title">Blogs</h1>
+        <div>
+          <a href="/users/login" class="link">
+            <button type="button" class="btn btn-primary">Login</button>
+          </a>
+          <a href="/users/register" class="link">
+            <button type="button" class="btn btn-primary">Register</button>
+          </a>
+        </div>
+      </div>
+    </main>
+    <%- include('partials/footer.ejs')%>
+  </body>
+</html>

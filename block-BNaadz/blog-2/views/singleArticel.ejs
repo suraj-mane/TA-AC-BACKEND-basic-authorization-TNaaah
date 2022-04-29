@@ -1,0 +1,50 @@
+<%- include('partials/header.ejs')%>
+<div class="container">
+  <div class="article">
+    <h2 class="s-article-title"><%= article.title%></h2>
+    <% article.author.forEach(author => {%>
+      <h3 class="author"><%= author.name%></h3>
+    <%})%>  
+    <% article.tags.forEach(tag => {%>
+      <span class="s-article-tag"><%= tag%></span>
+    <%})%>
+    <p class="s-article-summery"><%= article.summery%></p>
+    <h5><%= article.likes%></h5>
+    <a href="/articles/<%= article.id%>/like" class="article-link-2">
+      <button type="button" class="btn btn-info s-btn">like</button>
+    </a>
+    <a href="/articles/<%= article.id%>/edit" class="article-link-2">
+      <button type="button" class="btn btn-secondary s-btn-2">Edit</button>
+    </a>
+    <a href="/articles/<%= article.id%>/delete" class="article-link-2">
+      <button type="button" class="btn btn-danger s-btn-2">Delete</button>
+    </a>
+    <hr class="s-line">
+    <div>
+      <h4>Comments</h4>
+      <form action="/articles/<%= article.id%>/comment" method="post">
+        <textarea name="comment" class="s-comment" cols="50" rows="3"></textarea>
+        <br>
+        <button type="submit" class="btn btn-secondary s-btn">Add Comment</button>
+      </form>
+      <div>
+        <% article.commentId.forEach(comment => {%>
+          <div>
+            <h4 class="comment-s"><%= comment.comment%></h4>
+            <h5><%= comment.likes%></h5>
+            <a href="/comments/<%= comment.id%>/like" class="link">
+              <button type="submit" class="btn btn-info s-btn">like</button>
+            </a>
+            <a href="/comments/<%= comment.id%>" class="link">
+              <button type="submit" class="btn btn-secondary s-btn-2">Edit</button>
+            </a>
+            <a href="/comments/<%= comment.id%>/delete" class="link">
+              <button type="submit" class="btn btn-danger s-btn-2">delete</button>
+            </a>
+          </div>
+        <%})%>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer.ejs')%>
