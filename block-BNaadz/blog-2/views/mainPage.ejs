@@ -1,0 +1,11 @@
+<%- include('partials/header.ejs')%>
+<div class="container">
+  <div class="article">
+    <% article.forEach(article => {%>
+      <a href="/articles/<%= article.id %>" class="article-link-2">
+        <h2 class="article-link"><%= article.title%></h2>
+      </a>
+    <%})%>
+  </div>
+</div>
+<%- include('partials/footer.ejs')%>

@@ -1,0 +1,12 @@
+<%- include('partials/header.ejs')%>
+<div class="container">
+  <div>
+    <form action="/comments/<%= comment.id%>/" method="post" class="from">
+      <h4>Comments Edit</h4>
+      <input type="text" name="comment" class="s-comment input" value="<%= comment.comment%>">
+      <br>
+      <button type="submit" class="btn btn-secondary s-btn">Edit Comment</button>
+    </form>
+  </div>
+</div>
+<%- include('partials/footer.ejs')%>
