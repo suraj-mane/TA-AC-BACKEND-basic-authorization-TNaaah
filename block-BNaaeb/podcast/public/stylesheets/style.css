@@ -1,0 +1,17 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.footer {
+  background-color: rgb(28, 27, 27);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

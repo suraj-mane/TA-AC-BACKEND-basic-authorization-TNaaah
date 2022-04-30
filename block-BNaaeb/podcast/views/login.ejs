@@ -1,0 +1,15 @@
+<%- include('partials/header'); -%>
+<div class="container">
+  <div class="mt-5 ">
+    <form action="/users/login" class="border border-3 border-dark m-auto w-50 p-3 text-center" method="post">
+      <h1 class="text-center m-4">Login</h1>
+      <% if(error){%>
+      <h6 class="text-danger"><%= error%></h6>
+      <%}%>
+      <input class="w-100 rounded-3 p-2 m-2 fs-5" type="text" name="email" placeholder="Enter Your Email">
+      <input class="w-100 rounded-3 p-2 m-2 fs-5" type="text" name="password" placeholder="Enter Your Password">
+      <button type="submit" class="btn btn-success d-block m-auto mt-3 fs-5 ">Login</button>
+    </form>
+  </div>
+</div>
+<%- include('partials/footer'); -%>
