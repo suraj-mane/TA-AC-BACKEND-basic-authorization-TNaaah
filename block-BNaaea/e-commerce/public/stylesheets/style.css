@@ -1,0 +1,66 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header-btn {
+  padding: 1rem;
+}
+
+.boxs{
+  margin-top: 10rem;
+}
+
+.index-btn {
+  padding: 2rem;
+}
+
+.product {
+  margin: 2rem;
+  width: 400px;
+  border: 2px solid black;
+}
+
+.main-product {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form {
+  width: 700px;
+  margin: 10rem auto;
+  padding: 2rem;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.input {
+  width: 99%;
+  padding: 0.5rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 0.8rem 0;
+}
+
+.error {
+  color: red;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(34, 33, 33);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  bottom: 0;
+}
